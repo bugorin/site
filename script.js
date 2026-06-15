@@ -8,6 +8,14 @@ const toastDelay = 1400;
 const whatsappButton = document.querySelector("#whatsappButton");
 const joinToast = document.querySelector("#joinToast");
 
+const syncAppHeight = () => {
+  document.documentElement.style.setProperty("--app-height", `${window.innerHeight}px`);
+};
+
+syncAppHeight();
+window.addEventListener("resize", syncAppHeight);
+window.addEventListener("orientationchange", syncAppHeight);
+
 if (whatsappButton) {
   whatsappButton.href = WHATSAPP_GROUP_LINK;
 }
