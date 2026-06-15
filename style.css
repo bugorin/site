@@ -55,21 +55,6 @@ img {
   width: min(100%, var(--container));
 }
 
-.top-banner {
-  margin: 0 auto 16px;
-  width: fit-content;
-  max-width: 100%;
-  padding: 12px 20px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--primary), #b02f67);
-  color: #fff;
-  text-align: center;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  box-shadow: 0 16px 28px rgba(141, 29, 77, 0.24);
-}
-
 .hero-card,
 .urgency-card {
   border: 1px solid var(--border);
@@ -369,10 +354,6 @@ img {
   }
 
   .top-banner {
-    margin-bottom: 22px;
-  }
-
-  .hero-card {
     padding: 36px 34px 32px;
   }
 
