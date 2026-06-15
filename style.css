@@ -1,13 +1,10 @@
 :root {
   --bg: #fff8fa;
   --surface: rgba(255, 255, 255, 0.9);
-  --surface-strong: #ffffff;
   --text: #351c29;
   --muted: #78616d;
   --primary: #8f1f4f;
-  --primary-dark: #671236;
   --primary-soft: #f8dfe8;
-  --primary-tint: #fff0f5;
   --accent: #25d366;
   --accent-dark: #18b655;
   --shadow: 0 26px 70px rgba(108, 29, 65, 0.12);
@@ -47,8 +44,11 @@ img {
 
 .page-shell {
   width: 100%;
+  min-height: 100vh;
+  min-height: var(--app-height, 100vh);
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   padding:
     max(16px, env(safe-area-inset-top))
@@ -56,25 +56,25 @@ img {
     max(16px, env(safe-area-inset-bottom));
 }
 
-.phone-stage {
-  position: relative;
+.page-frame {
   width: min(100%, var(--container));
   display: flex;
   justify-content: center;
-}
-
-.hero-card {
-  border: 1px solid var(--border);
-  background: var(--surface);
-  backdrop-filter: blur(14px);
-  box-shadow: var(--shadow);
+  align-items: center;
 }
 
 .hero-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   overflow: hidden;
   padding: 74px 22px 20px;
+  border: 1px solid var(--border);
   border-radius: var(--radius-xl);
+  background: var(--surface);
+  backdrop-filter: blur(14px);
+  box-shadow: var(--shadow);
   text-align: center;
 }
 
@@ -90,9 +90,15 @@ img {
   pointer-events: none;
 }
 
-.hero-avatar-wrap {
+.hero-header,
+.hero-actions {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-avatar-wrap {
   display: flex;
   width: fit-content;
   margin: -22px auto 10px;
@@ -112,11 +118,9 @@ img {
 }
 
 .hero-title {
-  position: relative;
-  z-index: 1;
   margin: 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.45rem, 4vw, 2.15rem);
+  font-size: clamp(1.72rem, 4vw, 2.12rem);
   line-height: 1.02;
   letter-spacing: -0.025em;
   text-wrap: balance;
@@ -128,17 +132,11 @@ img {
 }
 
 .hero-copy {
-  position: relative;
-  z-index: 1;
   margin: 12px auto 0;
   max-width: 32ch;
   font-size: 0.96rem;
   line-height: 1.62;
   color: var(--muted);
-}
-
-.benefits-line {
-  margin: 0;
 }
 
 .cta-button {
@@ -172,6 +170,12 @@ img {
 .cta-button:focus-visible {
   outline: 3px solid rgba(37, 211, 102, 0.2);
   outline-offset: 3px;
+}
+
+.cta-icon {
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
 }
 
 .brand-marquee {
@@ -218,14 +222,9 @@ img {
   height: 22px;
 }
 
-.cta-icon {
-  display: inline-flex;
-  width: 22px;
-  height: 22px;
-}
-
 .benefits-line {
   margin-top: 14px;
+  margin-bottom: 0;
   font-size: 0.84rem;
   line-height: 1.55;
   color: var(--muted);
@@ -301,9 +300,6 @@ img {
 
 @media (min-width: 760px) {
   .page-shell {
-    min-height: 100vh;
-    min-height: calc(var(--app-height, 100vh) - env(safe-area-inset-top) - env(safe-area-inset-bottom));
-    align-items: center;
     padding:
       max(24px, env(safe-area-inset-top))
       24px
