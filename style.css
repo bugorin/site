@@ -32,9 +32,25 @@ body {
   color: var(--text);
   overflow-x: hidden;
   background:
+    linear-gradient(rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.42)),
+    radial-gradient(circle at 25% 25%, rgba(143, 31, 79, 0.03) 0 18%, transparent 19%),
+    radial-gradient(circle at 75% 25%, rgba(143, 31, 79, 0.03) 0 18%, transparent 19%),
+    radial-gradient(circle at 50% 50%, rgba(143, 31, 79, 0.03) 0 18%, transparent 19%),
+    radial-gradient(circle at 25% 75%, rgba(143, 31, 79, 0.03) 0 18%, transparent 19%),
+    radial-gradient(circle at 75% 75%, rgba(143, 31, 79, 0.03) 0 18%, transparent 19%),
     radial-gradient(circle at top, rgba(214, 129, 161, 0.2), transparent 30%),
     radial-gradient(circle at bottom right, rgba(255, 209, 226, 0.45), transparent 22%),
     linear-gradient(180deg, #fffdfd 0%, var(--bg) 48%, #fff3f7 100%);
+  background-size:
+    auto,
+    72px 72px,
+    72px 72px,
+    72px 72px,
+    72px 72px,
+    72px 72px,
+    auto,
+    auto,
+    auto;
 }
 
 img {
