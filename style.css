@@ -33,6 +33,7 @@ body {
   min-height: var(--app-height, 100vh);
   font-family: "Inter", sans-serif;
   color: var(--text);
+  overflow-x: hidden;
   background:
     radial-gradient(circle at top, rgba(214, 129, 161, 0.2), transparent 30%),
     radial-gradient(circle at bottom right, rgba(255, 209, 226, 0.45), transparent 22%),
@@ -45,8 +46,9 @@ img {
 }
 
 .page-shell {
+  width: 100%;
   min-height: 100vh;
-  min-height: var(--app-height, 100vh);
+  min-height: calc(var(--app-height, 100vh) - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -305,6 +307,8 @@ img {
       max(24px, env(safe-area-inset-top))
       24px
       max(24px, env(safe-area-inset-bottom));
+    min-height: 100vh;
+    min-height: calc(var(--app-height, 100vh) - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   }
 
   .hero-card {
