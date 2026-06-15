@@ -47,10 +47,8 @@ img {
 
 .page-shell {
   width: 100%;
-  min-height: 100vh;
-  min-height: calc(var(--app-height, 100vh) - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding:
     max(16px, env(safe-area-inset-top))
@@ -303,12 +301,13 @@ img {
 
 @media (min-width: 760px) {
   .page-shell {
+    min-height: 100vh;
+    min-height: calc(var(--app-height, 100vh) - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    align-items: center;
     padding:
       max(24px, env(safe-area-inset-top))
       24px
       max(24px, env(safe-area-inset-bottom));
-    min-height: 100vh;
-    min-height: calc(var(--app-height, 100vh) - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   }
 
   .hero-card {
