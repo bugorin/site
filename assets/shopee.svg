@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 90" fill="none">
+  <path d="M55 25 L95 25 L100 78 Q100 82 96 82 L54 82 Q50 82 50 78 Z" fill="#EE4D2D"/>
+  <path d="M65 25 Q65 12 75 12 Q85 12 85 25" stroke="#EE4D2D" stroke-width="3" fill="none"/>
+  <text x="75" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#fff" font-style="italic">S</text>
+  <text x="160" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#EE4D2D">Shopee</text>
+</svg>
