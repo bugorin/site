@@ -1,5 +1,5 @@
 // Link do WhatsApp facil de trocar.
-const WHATSAPP_GROUP_LINK = "https://wa.me/5500000000000?text=Quero%20entrar%20no%20grupo";
+const WHATSAPP_GROUP_LINK = "https://chat.whatsapp.com/IaSbTw1H9hl4YeTbDUhXgS";
 
 // Configuracoes simples para reaproveitar os elementos de interface.
 const progressPercentage = 80;
